@@ -1,0 +1,17 @@
+/ herb:slots client
+.mx-auto.max-w-4xl.px-4.py-6
+  header.mb-6.flex.items-baseline.justify-between
+    h1.text-2xl.font-bold Deferred
+  section.mb-8
+    h2.mb-2.text-sm.text-gray-500 Async, requested on mount
+    Async
+      - sleep 1
+      p.rounded.border.border-gray-200.bg-gray-50.p-3.text-sm = Geo.slow_stats
+      Fallback: p.animate-pulse.rounded.border.border-gray-200.bg-gray-200.p-3.text-sm &nbsp;
+  div class="h-[1600px] rounded border border-dashed border-gray-200 p-3 text-sm text-gray-700" Keep scrolling for the lazy block
+  section.mt-8
+    h2.mb-2.text-sm.text-gray-500 Lazy, requested when it scrolls into view
+    Lazy
+      - sleep 1
+      p.rounded.border.border-gray-200.bg-gray-50.p-3.text-sm = Geo.slow_facts
+      Fallback: p.animate-pulse.rounded.border.border-gray-200.bg-gray-200.p-3.text-sm &nbsp;
