@@ -66,6 +66,15 @@ attributes and custom properties, so the look comes from `@import "moly-ui/theme
 Pages that need their own CSS use `<style scoped>` in the template instead of adding to the global
 stylesheet.
 
+### Slim
+
+Some templates are written in Slim to show that ReActionView treats them the same as ERB:
+the layout, the Dashboard, Deferred, Drawer and Toasts pages, and the `shared/album_card` partial,
+which the Slim Drawer page and the ERB Overlays page both render. `config.intercept_slim` compiles
+them with Herb, so they get the same overlays, dev tools, slots and in-place patches from the dev
+server. A Slim template asks for slots with `/ herb:slots client` and declares state with
+`/ herb:state (...)`. They were converted from the ERB originals with `herb-convert --to slim`.
+
 ### Dependency pins
 
 The demo usually runs ahead of the published releases, so `herb` and `reactionview` are pulled from
