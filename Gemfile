@@ -27,8 +27,9 @@ gem "cssbundling-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem "herb", "~> 0.11.0"
-gem "reactionview", "~> 0.6.0"
+gem "prism", github: "ruby/prism", tag: "v1.9.0"
+gem "herb", github: "afomera/herb", branch: "slim-support"
+gem "reactionview", github: "afomera/reactionview", branch: "slim-support"
 
 # An extremely fast CSS parser, transformer, bundler, and minifier.
 gem "lightningcss", "~> 1.33.0"

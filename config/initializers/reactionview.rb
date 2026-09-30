@@ -5,6 +5,7 @@ require "herb/engine/visitors/source_attribution_visitor"
 
 ReActionView.configure do |config|
   config.intercept_erb = true
+  config.intercept_slim = true
   config.debug_mode = Rails.env.development?
   config.slots = :client
 
